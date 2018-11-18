@@ -15,7 +15,8 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 //@Configuration
-@EnableJpaRepositories(basePackages = "com.cmpt732.yelp.recommendation.repository")
+//@EnableJpaRepositories(basePackages = "com.cmpt732.yelp.recommendation.repository")
+//@PropertySource("persistence-mysql.properties")
 // @PropertySource("persistence-h2.properties")
 // @PropertySource("persistence-hsqldb.properties")
 // @PropertySource("persistence-derby.properties")
