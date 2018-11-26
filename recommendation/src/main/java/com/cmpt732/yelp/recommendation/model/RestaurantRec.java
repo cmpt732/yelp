@@ -26,27 +26,50 @@ public class RestaurantRec {
     private long id;
 
     @Column(name = "userId", length=50, nullable=false)
-    @JsonProperty("user_id")
+//    @JsonProperty("user_id")
     private String userId;
 
     @Column(name = "businessId", length=50, nullable=false)
-    @JsonProperty("business_id")
+//    @JsonProperty("business_id")
     private String businessId;
 
     @Column(name = "businessName", nullable=false)
-    @JsonProperty("name")
+//    @JsonProperty("name")
     private String businessName;
 
     private String feature1;
 
+    private float weight1;
+
     private String feature2;
+
+    private float weight2;
 
     private String feature3;
 
+    private float weight3;
+
     private String feature4;
+
+    private float weight4;
 
     private String feature5;
 
+    private float weight5;
+
+    private float stars;
+
+    private String address;
+
+    private String city;
+
+    private String state;
+
+    @Column(name = "postalCode", length=10)
+//    @JsonProperty("postal_code")
+    private String postalCode;
+
+    private String categories;
 
     public long getId() {
         return id;

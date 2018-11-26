@@ -8,6 +8,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.util.List;
+
 @CrossOrigin
 @RepositoryRestResource(collectionResourceRel = "recommendations", path = "recommendations")
 public interface RestaurantRecRepository extends CrudRepository<RestaurantRec, Long> {
@@ -29,5 +31,5 @@ public interface RestaurantRecRepository extends CrudRepository<RestaurantRec, L
     void deleteById(Long aLong);
 
     @RestResource(path = "byUserId", rel = "customFindUserMethod")
-    RestaurantRec findByUserId(@Param("userId") String userId);
+    List<RestaurantRec> findByUserId(@Param("userId") String userId);
 }

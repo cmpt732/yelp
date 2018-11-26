@@ -1,0 +1,88 @@
+{
+  "days": [
+    1,
+    3,
+    5,
+    6,
+    0
+  ],
+  "menuItems": [
+    {
+      "name": "bean and cheese burrito",
+      "price": 6.95
+    },
+    {
+      "name": "cheese tortellini in tomato sauce",
+      "price": 3.95
+    },
+    {
+      "name": "coffee",
+      "price": 6.95
+    },
+    {
+      "name": "falafel wrap with tabbouleh",
+      "price": 4.95
+    },
+    {
+      "name": "flourless chocolate cake",
+      "price": 8.95
+    },
+    {
+      "name": "garden fresh salad",
+      "price": 6.5
+    },
+    {
+      "name": "happy buddha stir fry",
+      "price": 10.45
+    },
+    {
+      "name": "hummus appetizer plate",
+      "price": 8
+    },
+    {
+      "name": "lentil burger",
+      "price": 6
+    },
+    {
+      "name": "lentil soup",
+      "price": 4.5
+    },
+    {
+      "name": "pasta with olives and marinated lemon",
+      "price": 6.95
+    },
+    {
+      "name": "spinach and cheese wrap",
+      "price": 5.95
+    },
+    {
+      "name": "tea",
+      "price": 5.95
+    },
+    {
+      "name": "toasted sandwich with grilled eggplant",
+      "price": 8.95
+    },
+    {
+      "name": "tofu chicken wrap",
+      "price": 9.95
+    },
+    {
+      "name": "tomato and cheese sandwich",
+      "price": 11.45
+    },
+    {
+      "name": "vegetable stew",
+      "price": 5.95
+    }
+  ],
+  "price": 2,
+  "rating": 1,
+  "id": "tofuparadise",
+  "name": "BBQ Tofu Paradise",
+  "cuisine": "vegetarian",
+  "opens": "16:30:00",
+  "closes": "20:00:00",
+  "location": "22A King West",
+  "description": "Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers."
+}
