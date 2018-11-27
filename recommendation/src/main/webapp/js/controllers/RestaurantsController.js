@@ -8,11 +8,16 @@ recommendationApp.controller('RestaurantsController',
   }
 
   var filter = $scope.filter = {
-    cuisine: [],
+    categories: [],
     price: null,
-    rating: null
+    stars: null
   };
 
+   // for histogram
+   $scope.width = 100;
+   $scope.height = 100;
+   $scope.yAxis = "Score"
+   $scope.xAxis = "Features"
 
   //var allRestaurants = Restaurant.query(filterAndSortRestaurants);
 
@@ -24,7 +29,8 @@ recommendationApp.controller('RestaurantsController',
           RecService.getRecByUser(userId)
             .then(function success(response){
                 var allRec = response.data._embedded.recommendations;
-                $scope.restaurants = allRec;
+                $scope.allRec = allRec;   // $scope.allRec stores all restaurants recommendations for the input user
+                $scope.restaurants = allRec;  // $scope.restaurants stores the restaurants to be shown on page, could be filtered later when user selects the category
 
             },
             function error (response ){
@@ -36,8 +42,11 @@ recommendationApp.controller('RestaurantsController',
 
   $scope.$watch('filter', filterAndSortRestaurants, true);
 
+
+
   function filterAndSortRestaurants() {
     $scope.restaurants = [];
+    $scope.data = [];
 
     if ( !$scope.allRec ) {
         return;
@@ -49,15 +58,18 @@ recommendationApp.controller('RestaurantsController',
         return;
       }
 
-      if (filter.rating && filter.rating !== item.rating) {
+      if (filter.stars && filter.stars !== item.stars) {
         return;
       }
 
-      if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
+      if (filter.categories.length && filter.categories.indexOf(item.categories) === -1) {
         return;
       }
 
+      var featureSum = [{feature: item.feature1, score: item.score1}, {feature: item.feature12, score: item.score2},
+      {feature: item.feature3, score: item.score3}, {feature: item.feature4, score: item.score4}, {feature: item.feature5, score: item.score5}]
       $scope.restaurants.push(item);
+      $scope.data.push(featureSum)
     });
 
 

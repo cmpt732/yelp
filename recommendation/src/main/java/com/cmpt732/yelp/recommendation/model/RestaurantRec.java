@@ -39,29 +39,117 @@ public class RestaurantRec {
 
     private String feature1;
 
-    private float weight1;
+    private float score1;
 
     private String feature2;
 
-    private float weight2;
+    private float score2;
 
     private String feature3;
 
-    private float weight3;
+    private float score3;
 
     private String feature4;
 
-    private float weight4;
+    private float score4;
 
     private String feature5;
 
-    private float weight5;
+    private float score5;
 
     private float stars;
 
     private String address;
 
     private String city;
+
+    public float getScore1() {
+        return score1;
+    }
+
+    public void setScore1(float score1) {
+        this.score1 = score1;
+    }
+
+    public float getScore2() {
+        return score2;
+    }
+
+    public void setScore2(float score2) {
+        this.score2 = score2;
+    }
+
+    public float getScore3() {
+        return score3;
+    }
+
+    public void setScore3(float score3) {
+        this.score3 = score3;
+    }
+
+    public float getScore4() {
+        return score4;
+    }
+
+    public void setScore4(float score4) {
+        this.score4 = score4;
+    }
+
+    public float getScore5() {
+        return score5;
+    }
+
+    public void setScore5(float score5) {
+        this.score5 = score5;
+    }
+
+    public float getStars() {
+        return stars;
+    }
+
+    public void setStars(float stars) {
+        this.stars = stars;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getCategories() {
+        return categories;
+    }
+
+    public void setCategories(String categories) {
+        this.categories = categories;
+    }
 
     private String state;
 

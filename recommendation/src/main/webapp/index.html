@@ -8,29 +8,39 @@
 </head>
 <body>
 
-<div class="container">
+<div class="m-container homepage1" style="background-image: url(img/dessert6.jpg)" >
 
   <div class="navbar" ng-controller="NavbarController">
-    <div class="navbar-inner">
-      <a class="brand" href="#/">
-        <img class="img-rounded pull-left" ng-src="img/yelp.jpeg">
-      </a>
-      <ul class="nav">
-        <li ng-class="{active: routeIs('/')}"><a href="#/">Home</a></li>
-        <li ng-class="{active: routeIs('/how-it-works')}"><a href="#/how-it-works">How it works</a></li>
-        <li ng-class="{active: routeIs('/who-we-are')}"><a href="#/who-we-are">Who we are</a></li>
-      </ul>
-
-      <ul class="nav pull-right">
-        <li ng-class="{active: routeIs('/help')}"><a href="#/help">Help</a></li>
-      </ul>
+    <div class="u-text-centered">
+      <h1 class="logo" id="logo">
+        <a href="#/"></a>
+      </h1>
     </div>
+    <!--<div class="navbar-inner">-->
+      <!--<a class = logo href="#/">-->
+        <!--<img class="img-rounded pull-left logo" ng-src="img/yelp.png">-->
+      <!--</a>-->
+      <!--&lt;!&ndash;<ul class="nav">&ndash;&gt;-->
+        <!--&lt;!&ndash;<li ng-class="{active: routeIs('/')}"><a href="#/">Home</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li ng-class="{active: routeIs('/how-it-works')}"><a href="#/how-it-works">How it works</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li ng-class="{active: routeIs('/who-we-are')}"><a href="#/who-we-are">Who we are</a></li>&ndash;&gt;-->
+      <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<ul class="nav pull-right">&ndash;&gt;-->
+        <!--&lt;!&ndash;<li ng-class="{active: routeIs('/help')}"><a href="#/help">Help</a></li>&ndash;&gt;-->
+      <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+    <!--</div>-->
   </div>
 
 
   <ng-view></ng-view>
 
 </div>
+
+<div class="header">
+  <h2 class="u-text-centered">Yelp Recommendation</h2>
+</div>
+
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
