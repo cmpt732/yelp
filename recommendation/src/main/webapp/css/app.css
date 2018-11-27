@@ -149,11 +149,6 @@ a {
     text-decoration: none;
 }
 
-.bar {
-    background: blue;
-    position: absolute;
-    bottom: 0;
-}
 h2 {
     word-wrap: break-word!important;
     word-break: break-word!important;
@@ -167,6 +162,34 @@ h2 {
 }
 .u-text-centered {
     text-align: center!important;
+}
+
+.bar {
+    background: blue;
+    position: absolute;
+    bottom: 0;
+}
+
+.chart {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 60px auto;
+  position: relative;
+}
+
+.y {
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  bottom: 0;
+  padding: 5px;
+}
+
+.x {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 5px;
 }
 
 .fm-restaurant-list {

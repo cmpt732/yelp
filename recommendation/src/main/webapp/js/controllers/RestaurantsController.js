@@ -14,8 +14,8 @@ recommendationApp.controller('RestaurantsController',
   };
 
    // for histogram
-   $scope.width = 100;
-   $scope.height = 100;
+   $scope.width = 20;
+   $scope.height = 20;
    $scope.yAxis = "Score"
    $scope.xAxis = "Features"
 
