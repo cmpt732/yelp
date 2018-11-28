@@ -9,5 +9,5 @@ recommendationApp.controller('MenuController',
 
   $scope.restaurant = Restaurant.get({id: $routeParams.restaurantId});
   $scope.cart = cart;
-``
+
 });

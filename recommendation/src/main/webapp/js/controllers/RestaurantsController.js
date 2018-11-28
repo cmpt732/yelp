@@ -3,7 +3,7 @@
 recommendationApp.controller('RestaurantsController',
     function RestaurantsController($scope, RecService, customer, $location, Restaurant) {
 
-  if (!customer.address) {
+  if (!customer.name) {
     $location.url('/customer');
   }
 
@@ -16,8 +16,8 @@ recommendationApp.controller('RestaurantsController',
    // for histogram
    $scope.width = 20;
    $scope.height = 20;
-   $scope.yAxis = "Score"
-   $scope.xAxis = "Features"
+   $scope.yAxis = "Score";
+   $scope.xAxis = "Features";
 
   //var allRestaurants = Restaurant.query(filterAndSortRestaurants);
 
@@ -38,7 +38,7 @@ recommendationApp.controller('RestaurantsController',
             });
      };
 
-  $scope.getRecByUser( customer.name)
+  $scope.getRecByUser( customer.name);
 
   $scope.$watch('filter', filterAndSortRestaurants, true);
 
