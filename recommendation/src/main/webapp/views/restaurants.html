@@ -49,13 +49,19 @@
         <th><a href ng-click="sortBy('stars')">Rating {{sortIconFor('stars')}}</a></th>
       </tr>
       <tr ng-repeat="restaurant in restaurants">
-        <td class="chart" style="width:{{width}}px; height:{{height}}px;">
+        <td>
 
-          <div class="y" style="width:{{height}}px;">{{yAxis}}</div>
-          <div class="x">{{xAxis}}</div>
-
-          <!-- Data -->
-          <div ng-repear = "bar in data" class="bar" style="height:{{bar.score*5}}px; width:{{width / data.length - 5}}px; left:{{$index / data.length * width}}px;"></div>
+          <!--bar chart-->
+          <ul class="chart" style="width:{{width}}px; height:{{height}}px;">
+            <!-- Labels -->
+            <div class="y" style="width:{{height}}px;">{{yAxis}}</div>
+            <div class="x">{{xAxis}}</div>
+            <!-- Data -->
+            <li ng-repeat="bar in restaurant.features" class="bar"
+                style="height:{{bar.score / max * height}}px; width:{{width / restaurant.features.length - 5}}px; left:{{$index / restaurant.features.length * width}}px;">
+              <span>{{bar.feature}}:{{bar.score}}</span>
+            </li>
+          </ul>
 
         </td>
         <td>

@@ -13,16 +13,9 @@ recommendationApp.controller('RestaurantsController',
     stars: null
   };
 
-   // for histogram
-   $scope.width = 20;
-   $scope.height = 20;
-   $scope.yAxis = "Score";
-   $scope.xAxis = "Features";
 
   //var allRestaurants = Restaurant.query(filterAndSortRestaurants);
 
-//  var recommendationRes = Restaurant.get({userId: customer.name});
-//  var allRestaurants = recommendationRes._embedded.recommendations;
 
 
     $scope.getRecByUser = function ( userId ) {
@@ -30,8 +23,10 @@ recommendationApp.controller('RestaurantsController',
             .then(function success(response){
                 var allRec = response.data._embedded.recommendations;
                 $scope.allRec = allRec;   // $scope.allRec stores all restaurants recommendations for the input user
-                $scope.restaurants = allRec;  // $scope.restaurants stores the restaurants to be shown on page, could be filtered later when user selects the category
+                // $scope.restaurants = allRec;
 
+                configChar();
+                filterAndSortRestaurants();  // Populate the $scope.restaurants, which stores the restaurants to be shown on page, could be filtered later when user selects the category
             },
             function error (response ){
                 console.log('Error getting recommendation by user!');
@@ -43,10 +38,18 @@ recommendationApp.controller('RestaurantsController',
   $scope.$watch('filter', filterAndSortRestaurants, true);
 
 
+  function configChar() {
+
+      $scope.width = 200;
+      $scope.height = 100;
+      $scope.yAxis = 'Score';
+      $scope.xAxis = 'Features';
+      $scope.max = 5;
+
+  }
 
   function filterAndSortRestaurants() {
     $scope.restaurants = [];
-    $scope.data = [];
 
     if ( !$scope.allRec ) {
         return;
@@ -66,10 +69,12 @@ recommendationApp.controller('RestaurantsController',
         return;
       }
 
-      var featureSum = [{feature: item.feature1, score: item.score1}, {feature: item.feature12, score: item.score2},
-      {feature: item.feature3, score: item.score3}, {feature: item.feature4, score: item.score4}, {feature: item.feature5, score: item.score5}]
+      var features = [{feature: item.feature1, score: item.score1}, {feature: item.feature2, score: item.score2},
+      {feature: item.feature3, score: item.score3}, {feature: item.feature4, score: item.score4}, {feature: item.feature5, score: item.score5}];
+
+      item.features = features;
       $scope.restaurants.push(item);
-      $scope.data.push(featureSum)
+
     });
 
 
