@@ -25,7 +25,7 @@ recommendationApp.controller('RestaurantsController',
                 $scope.allRec = allRec;   // $scope.allRec stores all restaurants recommendations for the input user
                 // $scope.restaurants = allRec;
 
-                configChar();
+                // configChar();
                 filterAndSortRestaurants();  // Populate the $scope.restaurants, which stores the restaurants to be shown on page, could be filtered later when user selects the category
             },
             function error (response ){
@@ -37,6 +37,28 @@ recommendationApp.controller('RestaurantsController',
 
   $scope.$watch('filter', filterAndSortRestaurants, true);
 
+  $scope.bindCanvas = function(restaurant, i) {
+      var ctx = document.getElementById("barChart_"+i);
+      new Chart(ctx,{
+          type: 'bar',
+          data: {
+              labels: [restaurant.feature1, restaurant.feature2, restaurant.feature3, restaurant.feature4, restaurant.feature5],
+              datasets: [{
+                  label: "Score",
+                  backgroundColor: ["red", "green","blue","violet","yellow"],
+                  data: [restaurant.score1,restaurant.score2,restaurant.score3,restaurant.score4,restaurant.score5]
+              }]
+          },
+          options: {
+              scales: {
+                  xAxes: [{
+                      barPercentage: 0.5
+
+                  }]
+              }
+          }
+      });
+  }
 
   function configChar() {
 
@@ -45,6 +67,7 @@ recommendationApp.controller('RestaurantsController',
       $scope.yAxis = 'Score';
       $scope.xAxis = 'Features';
       $scope.max = 5;
+
 
   }
 
