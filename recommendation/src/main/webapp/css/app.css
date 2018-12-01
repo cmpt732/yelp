@@ -221,7 +221,7 @@ h2 {
 }
 
 .fm-restaurant-list {
-  min-height: 646px !important;
+  /*min-height: 646px !important;*/
 }
 
 .fm-restaurant-list table {
@@ -321,4 +321,37 @@ h2 {
 
 input.ng-invalid {
   border: 1px solid red;
+}
+
+.main-table {
+    /*width: 100%;*/
+}
+
+.header-row {
+    display: flex;
+}
+
+.header-row .item {
+    display: inline-block;
+    width: 24%;
+    padding: 0;
+    margin: 0;
+}
+
+.header-row .item h2 {
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.data-row {
+    display: flex;
+    padding: 10px 0px;
+}
+
+.data-row .data-item {
+    width: 24%;
+}
+
+.data-row .data-item .item{
+    padding: 0 5px;
 }
