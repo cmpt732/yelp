@@ -37,9 +37,12 @@ recommendationApp.controller('RestaurantsController',
 
   $scope.$watch('filter', filterAndSortRestaurants, true);
 
-  $scope.bindCanvas = function(restaurant, i) {
+  var charts = [];
+  $scope.bindCanvas = function(theRestaurant, i) {
+
+      var restaurant = $scope.restaurants[i];
       var ctx = document.getElementById("barChart_"+i);
-      new Chart(ctx,{
+      var myChart =new Chart(ctx,{
           type: 'bar',
           data: {
               labels: [restaurant.feature1, restaurant.feature2, restaurant.feature3, restaurant.feature4, restaurant.feature5],
@@ -54,10 +57,35 @@ recommendationApp.controller('RestaurantsController',
                   xAxes: [{
                       barPercentage: 0.5
 
+                  }],
+                  yAxes: [ {
+                      display: true,
+                      ticks: {
+                          suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+                          // OR //
+                          beginAtZero: true   // minimum value will be 0.
+                      }
                   }]
               }
           }
       });
+      charts.push(myChart);
+  }
+
+  function buildChartDom() {
+
+
+      charts.forEach( function (theChart) { theChart.destroy() })
+      angular.element(".chart-container").empty();
+
+
+      var containers = document.querySelectorAll(".chart-container");
+      for (var i=0; i< $scope.restaurants.length; i++) {
+          var restaurant = $scope.restaurants[i];
+          var canvas = angular.element('<canvas id="barChart_' + i + '" width="100" height="100"></canvas>');
+
+          angular.element(containers[i]).append(canvas);
+      }
   }
 
   function configChar() {
@@ -100,20 +128,24 @@ recommendationApp.controller('RestaurantsController',
 
     });
 
+    sortRestaurant();
 
-    // sort
-    $scope.restaurants.sort(function(a, b) {
-      if (a[filter.sortBy] > b[filter.sortBy]) {
-        return filter.sortAsc ? 1 : -1;
-      }
-
-      if (a[filter.sortBy] < b[filter.sortBy]) {
-        return filter.sortAsc ? -1 : 1;
-      }
-
-      return 0;
-    });
   };
+
+  function sortRestaurant() {
+      // sort
+      $scope.restaurants.sort(function(a, b) {
+          if (a[filter.sortBy] > b[filter.sortBy]) {
+              return filter.sortAsc ? 1 : -1;
+          }
+
+          if (a[filter.sortBy] < b[filter.sortBy]) {
+              return filter.sortAsc ? -1 : 1;
+          }
+
+          return 0;
+      });
+  }
 
 
   $scope.sortBy = function(key) {
@@ -123,6 +155,7 @@ recommendationApp.controller('RestaurantsController',
       filter.sortBy = key;
       filter.sortAsc = true;
     }
+      buildChartDom();
   };
 
 
