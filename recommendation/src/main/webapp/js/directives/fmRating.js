@@ -65,7 +65,7 @@ recommendationApp.directive('fmRating', function() {
     template:
       '<ul class="fm-rating" ng-class="{\'fm-rating-pointer\':!readonly}">' +
         '<li ng-repeat="style in styles" ng-class="style" ' +
-            'ng-click="select($index)" ng-mouseenter="enter($index)" ng-mouseleave="leave($index)">' +
+            'ng-click="select($index)" >' +
           '{{symbol}}' +
         '</li>' +
       '</ul>' +

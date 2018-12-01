@@ -40,6 +40,7 @@ recommendationApp.controller('RestaurantsController',
   var charts = [];
   $scope.bindCanvas = function(theRestaurant, i) {
 
+      sortRestaurant();
       var restaurant = $scope.restaurants[i];
       var ctx = document.getElementById("barChart_"+i);
       var myChart =new Chart(ctx,{
