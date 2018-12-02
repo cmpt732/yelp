@@ -12,14 +12,14 @@
 
     <form>
 
-      <h5>Rating</h5>
+      <!--<h5>Rating</h5>-->
 
-      <fm-rating ng-model="$parent.filter.stars"></fm-rating>
+      <!--<fm-rating ng-model="$parent.filter.stars"></fm-rating>-->
 
 
-      <h5>Price</h5>
+      <!--<h5>Price</h5>-->
 
-      <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
+      <!--<fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>-->
 
 
       <h5>Categories</h5>
@@ -91,17 +91,19 @@
 
       <div class="main-table">
           <div class="header-row">
-              <div class="item">
-                <h2><a href="javascript: void(0);">Chart</a></h2>
-              </div>
+
 
               <div class="item">
                   <h2><a href="javascript: void(0);">Name </a></h2>
               </div>
 
               <div class="item">
-                  <h2><a href="javascript: void(0);">Price </a></h2>
+                  <h2><a href="javascript: void(0);">Feacture Score</a></h2>
               </div>
+
+              <!--<div class="item">-->
+                  <!--<h2><a href="javascript: void(0);">Price </a></h2>-->
+              <!--</div>-->
 
               <div class="item">
                   <h2><a href="javascript: void(0);">Rating </a></h2>
@@ -110,11 +112,7 @@
 
           <div>
               <div class="data-row" ng-repeat="restaurant in restaurants">
-                  <div class="data-item">
-                      <div class="item, chart-container">
-                          <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="100" height="100"></canvas>
-                      </div>
-                  </div>
+
 
                   <div class="data-item">
                       <div class="item">
@@ -127,10 +125,16 @@
                   </div>
 
                   <div class="data-item">
-                      <div class="item">
-                        <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>
+                      <div class="item, chart-container">
+                          <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="100" height="100"></canvas>
                       </div>
                   </div>
+
+                  <!--<div class="data-item">-->
+                      <!--<div class="item">-->
+                        <!--<fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>-->
+                      <!--</div>-->
+                  <!--</div>-->
 
                   <div class="data-item">
                       <div class="item">

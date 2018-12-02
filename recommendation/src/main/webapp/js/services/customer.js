@@ -6,8 +6,8 @@ recommendationApp.factory('customer', function($rootScope, localStorage) {
       customerString = localStorage[LOCAL_STORAGE_ID];
 
   var customer = customerString ? JSON.parse(customerString) : {
-    name: undefined,
-    address: undefined
+    name: undefined
+//    address: undefined
   };
 
   $rootScope.$watch(function() { return customer; }, function() {

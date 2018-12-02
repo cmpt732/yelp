@@ -53,10 +53,6 @@ public class RestaurantRec {
 
     private float score4;
 
-    private String feature5;
-
-    private float score5;
-
     private float stars;
 
     private String address;
@@ -93,14 +89,6 @@ public class RestaurantRec {
 
     public void setScore4(float score4) {
         this.score4 = score4;
-    }
-
-    public float getScore5() {
-        return score5;
-    }
-
-    public void setScore5(float score5) {
-        this.score5 = score5;
     }
 
     public float getStars() {
@@ -143,11 +131,11 @@ public class RestaurantRec {
         this.postalCode = postalCode;
     }
 
-    public String getCategories() {
+    public String getcategories() {
         return categories;
     }
 
-    public void setCategories(String categories) {
+    public void setcategories(String categories) {
         this.categories = categories;
     }
 
@@ -223,11 +211,5 @@ public class RestaurantRec {
         this.feature4 = feature4;
     }
 
-    public String getFeature5() {
-        return feature5;
-    }
 
-    public void setFeature5(String feature5) {
-        this.feature5 = feature5;
-    }
 }

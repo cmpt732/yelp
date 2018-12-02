@@ -46,11 +46,11 @@ recommendationApp.controller('RestaurantsController',
       var myChart =new Chart(ctx,{
           type: 'bar',
           data: {
-              labels: [restaurant.feature1, restaurant.feature2, restaurant.feature3, restaurant.feature4, restaurant.feature5],
+              labels: [restaurant.feature1, restaurant.feature2, restaurant.feature3, restaurant.feature4],
               datasets: [{
                   label: "Score",
                   backgroundColor: ["red", "green","blue","violet","yellow"],
-                  data: [restaurant.score1,restaurant.score2,restaurant.score3,restaurant.score4,restaurant.score5]
+                  data: [restaurant.score1,restaurant.score2,restaurant.score3,restaurant.score4]
               }]
           },
           options: {
@@ -109,9 +109,6 @@ recommendationApp.controller('RestaurantsController',
 
     // filter
     angular.forEach($scope.allRec, function(item, key) {
-      if (filter.price && filter.price !== item.price) {
-        return;
-      }
 
       if (filter.stars && filter.stars !== item.stars) {
         return;
@@ -122,7 +119,7 @@ recommendationApp.controller('RestaurantsController',
       }
 
       var features = [{feature: item.feature1, score: item.score1}, {feature: item.feature2, score: item.score2},
-      {feature: item.feature3, score: item.score3}, {feature: item.feature4, score: item.score4}, {feature: item.feature5, score: item.score5}];
+      {feature: item.feature3, score: item.score3}, {feature: item.feature4, score: item.score4}];
 
       item.features = features;
       $scope.restaurants.push(item);
@@ -170,19 +167,21 @@ recommendationApp.controller('RestaurantsController',
 
 
   $scope.CUISINE_OPTIONS = {
-    african: 'African',
-    american: 'American',
-    barbecue: 'Barbecue',
-    cafe: 'Cafe',
-    chinese: 'Chinese',
-    'czech/slovak': 'Czech / Slovak',
-    german: 'German',
-    indian: 'Indian',
-    japanese: 'Japanese',
-    mexican: 'Mexican',
-    pizza: 'Pizza',
-    thai: 'Thai',
-    vegetarian: 'Vegetarian'
+    'American': 'American',
+    Mexican: 'Mexican',
+    Italian: 'Italian',
+    Japanese: 'Japanese',
+    Chinese: 'Chinese',
+    'Asian Fusion': 'Asian Fusion',
+    Thai: 'Thai',
+    Mediterranean: 'Mediterranean',
+    Vietnamese: 'Vietnamese',
+    Greek: 'Greek',
+    Indian: 'Indian',
+    Korean: 'Korean',
+    French: 'French',
+    Hawaiian: 'Hawaiian',
+    Others: 'Others'
   };
 
 
