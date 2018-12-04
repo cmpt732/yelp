@@ -49,7 +49,7 @@ recommendationApp.controller('RestaurantsController',
               labels: [restaurant.feature1, restaurant.feature2, restaurant.feature3, restaurant.feature4],
               datasets: [{
                   label: "Score",
-                  backgroundColor: ["red", "green","blue","violet","yellow"],
+                  backgroundColor: ["yellow", "green","blue","violet",],
                   data: [restaurant.score1,restaurant.score2,restaurant.score3,restaurant.score4]
               }]
           },

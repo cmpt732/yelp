@@ -37,9 +37,9 @@
   <div class="span9 fm-panel fm-restaurant-list">
     <h4>
       <ng-pluralize count="restaurants.length"
-                    when="{'0'    : 'No restaurants found. :-(',
-                           'one'  : '1 restaurant found!',
-                           'other': '{} restaurants found!'}">
+                    when="{'0'    : 'No Restaurants Found. :-(',
+                           'one'  : '1 Restaurant Found!',
+                           'other': '{} Restaurants Found!'}">
       </ng-pluralize>
     </h4>
 
@@ -90,25 +90,25 @@
     <!--</table>-->
 
       <div class="main-table">
-          <div class="header-row">
+          <!--<div class="header-row">-->
 
-
-              <div class="item">
-                  <h2><a href="javascript: void(0);">Name </a></h2>
-              </div>
-
-              <div class="item">
-                  <h2><a href="javascript: void(0);">Feacture Score</a></h2>
-              </div>
 
               <!--<div class="item">-->
-                  <!--<h2><a href="javascript: void(0);">Price </a></h2>-->
+                  <!--<h2><a href="javascript: void(0);">Name </a></h2>-->
               <!--</div>-->
 
-              <div class="item">
-                  <h2><a href="javascript: void(0);">Rating </a></h2>
-              </div>
-          </div>
+              <!--<div class="item-f">-->
+                  <!--<h2><a href="javascript: void(0);">Feature Score</a></h2>-->
+              <!--</div>-->
+
+              <!--&lt;!&ndash;<div class="item">&ndash;&gt;-->
+                  <!--&lt;!&ndash;<h2><a href="javascript: void(0);">Price </a></h2>&ndash;&gt;-->
+              <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+              <!--<div class="item-s">-->
+                  <!--<h2><a href="javascript: void(0);">Rating </a></h2>-->
+              <!--</div>-->
+          <!--</div>-->
 
           <div>
               <div class="data-row" ng-repeat="restaurant in restaurants">
@@ -116,18 +116,20 @@
 
                   <div class="data-item">
                       <div class="item">
-                          <a href="#/menu/{{restaurant.id}}">
-                              <!--<img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">-->
-                              <img class="img-rounded pull-left" ng-src="https://github.com/cmpt732/yelp/blob/master/recommendation/src/main/webapp/img/restaurants/{{restaurant.businessId}}.jpeg">
+                          <!--<a href="#/menu/{{restaurant.id}}">-->
+                              <img class="pull-left" ng-src="img/restaurants/{{restaurant.businessId}}.jpeg">
+                              <!--<img class="img-rounded pull-left" ng-src="https://github.com/cmpt732/yelp/blob/master/recommendation/src/main/webapp/img/restaurants/{{restaurant.businessId}}.jpeg">-->
                               <b>{{restaurant.businessName}}</b>
-                          </a>
-                          <p>{{restaurant.address}}</p>
+                          <!--</a>-->
+                          <p>{{restaurant.address}} {{restaurant.city}}  {{restaurant.postalCode}}</p>
+                          <p></p>
+
                       </div>
                   </div>
 
-                  <div class="data-item">
+                  <div class="data-item-f">
                       <div class="item, chart-container">
-                          <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="100" height="100"></canvas>
+                          <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="90" height="90"></canvas>
                       </div>
                   </div>
 
@@ -137,7 +139,7 @@
                       <!--</div>-->
                   <!--</div>-->
 
-                  <div class="data-item">
+                  <div class="data-item-s">
                       <div class="item">
                         <fm-rating ng-model="$parent.restaurant.stars" readonly="true"></fm-rating>
                       </div>
