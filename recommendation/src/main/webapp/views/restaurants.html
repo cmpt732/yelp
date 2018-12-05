@@ -117,9 +117,10 @@
                   <div class="data-item">
                       <div class="item">
                           <!--<a href="#/menu/{{restaurant.id}}">-->
-                              <img class="pull-left" ng-src="img/restaurants/{{restaurant.businessId}}.jpeg">
-                              <!--<img class="img-rounded pull-left" ng-src="https://github.com/cmpt732/yelp/blob/master/recommendation/src/main/webapp/img/restaurants/{{restaurant.businessId}}.jpeg">-->
-                              <b>{{restaurant.businessName}}</b>
+                              <!--<img class="pull-left" ng-src="img/restaurants/{{restaurant.businessId}}.jpeg">-->
+                              <img class="img-rounded pull-left" ng-src="https://s3.ca-central-1.amazonaws.com/yelp-img/restaurants/{{restaurant.businessId}}.jpeg">
+
+                          <b>{{restaurant.businessName}}</b>
                           <!--</a>-->
                           <p>{{restaurant.address}} {{restaurant.city}}  {{restaurant.postalCode}}</p>
                           <p></p>
@@ -127,17 +128,18 @@
                       </div>
                   </div>
 
+
                   <div class="data-item-f">
                       <div class="item, chart-container">
                           <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="90" height="90"></canvas>
                       </div>
                   </div>
 
-                  <!--<div class="data-item">-->
-                      <!--<div class="item">-->
-                        <!--<fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>-->
+                  <div class="data-item-emp">
+                      <!--<div class="item-emp">-->
+                        <!--&lt;!&ndash;<fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>&ndash;&gt;-->
                       <!--</div>-->
-                  <!--</div>-->
+                  </div>
 
                   <div class="data-item-s">
                       <div class="item">

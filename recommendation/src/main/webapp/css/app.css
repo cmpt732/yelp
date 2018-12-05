@@ -151,6 +151,7 @@ fm-rating:hover a {
   display: block;
   width: 450px;
   vertical-align: baseline!important;
+
 }
 
 
@@ -221,9 +222,9 @@ a {
     word-wrap: break-word!important;
     word-break: break-word!important;
     overflow-wrap: break-word!important;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 6px;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.28571em;
     color: #d32323;
     vertical-align: baseline!important;
@@ -336,9 +337,9 @@ input.ng-invalid {
 }
 
 .main-table {
-    /*width: 100%;*/
+    width: 100%;
 }
-
+/*
 .header-row {
     display: flex;
 }
@@ -378,14 +379,14 @@ input.ng-invalid {
     font-size: 20px;
     padding: 0 5px;
 }
-
+*/
 .data-row {
     display: flex;
     padding: 10px 0px;
 }
 
 .data-row .data-item {
-    width: 38%;
+    width: 43%;
 }
 
 
@@ -397,8 +398,10 @@ input.ng-invalid {
 b {
     color: #0073bb;
 }
+
+
 .data-row .data-item-f {
-    width: 28%;
+    width: 29%;
 }
 
 
@@ -406,11 +409,16 @@ b {
     padding: 0 5px;
 }
 
+.data-row .data-item-emp {
+    width: 15%;
+}
+
 .data-row .data-item-s {
-    width: 24%;
+    width: 22%;
 }
 
 
 .data-row .data-item-s .item{
     padding: 0 5px;
 }
+
