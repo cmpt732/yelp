@@ -1,0 +1,97 @@
+FusionCharts.ready(function() {
+  var topProductsChart = new FusionCharts({
+    type: 'multilevelpie',
+    renderAt: 'chart-container',
+    id: "myChart",
+    width: '500',
+    height: '500',
+    dataFormat: 'json',
+    dataSource: {
+      "chart": {
+        "caption": "Sales Breakup - Top Product Categories",
+        "subcaption": "Last Quarter",
+        "showPlotBorder": "1",
+        "piefillalpha": "60",
+        "pieborderthickness": "2",
+        "piebordercolor": "#FFFFFF",
+        "hoverfillcolor": "#CCCCCC",
+        "numberprefix": "$",
+        "plottooltext": "$label, $$valueK, $percentValue",
+        "theme": "fusion"
+      },
+      "category": [{
+        "label": "Yelp Business",
+        "color": "#ffffff",
+        "value": "60616",
+        "category": [{
+          "label": "Art & {br}Entertainment",
+          "color": "#f8bd19",
+          "value": "849",
+          "tooltext": "Art & Entertainment, $$valueK, $percentValue"
+        }, {
+          "label": "Restaurant",
+          "color": "#33ccff",
+          "value": "5000",
+          "tooltext": "Restaurant, $$valueK, $percentValue"
+        },{
+          "label": "Food",
+          "color": "#33ffcc",
+          "value": "2000",
+          "tooltext": "Restaurant, $$valueK, $percentValue"
+        }, {
+          "label": "Services",
+          "color": "#ffcccc",
+          "value": "1253",
+          "tooltext": "Services, $$valueK, $percentValue",
+          "category": [ {
+            "label": "Local",
+            "color": "#ffcccc",
+            "value": "338"
+          }, {
+            "label": "Professional",
+            "color": "#ffcccc",
+            "value": "240"
+          },{
+            "label": "Hotel",
+            "color": "#ffcccc",
+            "value": "600"
+          },{
+            "label": "Health",
+            "color": "#ffcccc",
+            "value": "236"
+          },{
+            "label": "Home",
+            "color": "#ffcccc",
+            "value": "119"
+          }
+        ]
+        }, {
+          "label": "Fashion",
+          "color": "#ccff66",
+          "value": "1323",
+          "category": [{
+            "label": "Beauty",
+            "color": "#ccff66",
+            "value": "787"
+          }, {
+            "label": "Others",
+            "color": "#ccff66",
+            "value": "106"
+          }, {
+
+            "label": "Hair",
+            "color": "#ccff66",
+            "value": "30"
+          },
+          {
+
+            "label": "Shopping",
+            "color": "#ccff66",
+            "value": "400"
+          }]
+        }]
+      }]
+    }
+  });
+  topProductsChart.render();
+});
