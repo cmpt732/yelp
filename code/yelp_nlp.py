@@ -23,7 +23,6 @@ assert spark.version >= '2.3'  # make sure we have Spark 2.3+
 nltk.data.path.append('/home/dxiang/nltk_data')
 
 
-#@functions.udf(returnType=types.ArrayType(types.StringType()))
 def py_morphy(tokens):
     from nltk.corpus import wordnet as wn
     nltk.data.path.append('/home/dxiang/nltk_data')
@@ -149,7 +148,6 @@ def main(inputs, output):
     stopwords_remover = StopWordsRemover(inputCol='words',
                                          outputCol='tokens',
                                          stopWords=StopWordsRemover.loadDefaultStopWords('english'))
-    # count_vectorizer = CountVectorizer(inputCol='filtered_words', outputCol='features')
     nlp_pipeline = Pipeline(stages=[regex_tokenizer, stopwords_remover])
     model = nlp_pipeline.fit(data)
     review = model.transform(data).select('business_id', 'stars', 'tokens')
