@@ -9,7 +9,6 @@ Written by Daniel Xiang
 import sys
 import nltk
 from nltk import pos_tag
-from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet as wn
 from nltk.corpus import sentiwordnet as swn
 from pyspark.sql import SparkSession, functions, types
