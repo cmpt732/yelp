@@ -33,6 +33,7 @@ yelp_nlp.py
 | `yelp_review_data_clean.py` | filter out all restaurant review data |
 | `yelp_recommendation_info.py` | merge business data, recommendation info and nlp feature info |
 | `yelp_visitor_recommend.py` | recommendation for visitors |
+
 yelp_visitor_recommend.py
 
 | Arguments | Description |
