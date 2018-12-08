@@ -71,3 +71,34 @@ yelp_recommendation_info.py
 | `#args2: input_recommend` | input directory for our top-k recommendation |
 | `#args3: input_feature` | input directory for nlp feature scores |
 | `#args4: output` | output directory |
+
+**Folder directory: Recommendation**
+
+This folder contains the web server code that provides a web interface for users to search restaurants by the user id.
+The web page will show wordcloud pictures, feature scores, starts for the recommended restaurants.
+
+The server side is based on Spring Boot and Spring data rest to provide restful API. The front-end is using AngularJS to present one-page web app.
+
+** Configuration **
+
+/src/main/resources/applications.properties
+
+It defines the DB connection url, user id,password etc.
+
+**How to build and start the web**
+
+1.Go to Recommendation folder, run following command to build the app:
+mvn clean install
+
+It will automatically generate the 'db-create.sql' that help you create the database. By default,it uses mysql.  
+You can use any mysql client to run the 'db-create.sql' to create the database and tables.  
+
+It should also produce the jar file in 'recommendation/target/recommendation-0.0.1-SNAPSHOT.jar'
+
+2.Run following command start the web server:
+
+_java -jar <your 'yelp' checkout folder>/recommendation/target/recommendation-0.0.1-SNAPSHOT.jar_
+
+3.You can browse the website via url of 'http://localhost:8080/index.html'
+
+
