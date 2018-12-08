@@ -19,6 +19,7 @@ yelp_recommender.py
 | `#args4: output` | output directory |
 
 yelp_nlp.py
+
 | Arguments | Description |
 | --- | --- |
 | `#args1: inputs` | input directory for review.json |
