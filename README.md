@@ -10,8 +10,9 @@ The project is to build a recommender system that will recommend restaurants to 
 | `load_tools.py` | Load tools |
 
 yelp_recommender.py
+
 | Arguments | Description |
-| ------------- | ------------- |
+| --- | --- |
 | `#args1: inputs_review` | input directory for review.json |
 | `#args2: inputs_business` | input directory for business.json |
 | `#args3: k` | the maximum number of recommended resturants for each user |
@@ -19,6 +20,6 @@ yelp_recommender.py
 
 yelp_nlp.py
 | Arguments | Description |
-| ------------- | ------------- |
+| --- | --- |
 | `#args1: inputs` | input directory for review.json |
 | `#args2: output` | output directory |
