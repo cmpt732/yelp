@@ -1,7 +1,6 @@
 package com.cmpt732.yelp.recommendation.repository;
 
 import com.cmpt732.yelp.recommendation.model.RestaurantRec;
-import com.cmpt732.yelp.recommendation.model.WebsiteUser;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -18,9 +17,6 @@ public interface RestaurantRecRepository extends CrudRepository<RestaurantRec, L
     @RestResource(exported = false)
     void delete(RestaurantRec entity);
 
-    @Override
-    @RestResource(exported = false)
-    void deleteAll();
 
     @Override
     @RestResource(exported = false)

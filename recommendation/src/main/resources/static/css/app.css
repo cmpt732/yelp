@@ -147,7 +147,7 @@ fm-rating:hover a {
 }
 
 
-.fm-deliver-to {
+.rec-customer {
   display: block;
   width: 450px;
   vertical-align: baseline!important;
@@ -173,7 +173,7 @@ input.ng-invalid.ng-dirty {
 
 .logo {
   width:90px;
-  height:40px
+  height:40px;
 }
 
 .m-container {
@@ -183,15 +183,15 @@ input.ng-invalid.ng-dirty {
 
 .homepage1 {
     padding-top: 30px;
-    height: 300px;
+    height: 400px;
     background-color: #333;
     background-size: cover;
-    background-position: 40%;
+    background-position: 75%;
 }
 
 .homepage2 {
     padding-top: 30px;
-    height: 250px;
+    height: 350px;
     background-color: #333;
     background-size: cover;
     background-position: 30%;
@@ -252,8 +252,8 @@ a {
 
 .fm-restaurant-list img {
   margin-right: 10px;
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
 }
 
 
@@ -402,6 +402,9 @@ b {
 
 .data-row .data-item-f {
     width: 29%;
+    height: 280px;
+    width: 321px;
+
 }
 
 

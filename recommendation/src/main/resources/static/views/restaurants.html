@@ -1,9 +1,10 @@
-<fm-deliver-to></fm-deliver-to>
+<rec-customer></rec-customer>
 
 
 <div class="m-container homepage2" style="background-color: transparent" >
 
 </div>
+
 
 <div class="row-fluid">
 
@@ -11,17 +12,6 @@
     <h4>Filter Restaurants</h4>
 
     <form>
-
-      <!--<h5>Rating</h5>-->
-
-      <!--<fm-rating ng-model="$parent.filter.stars"></fm-rating>-->
-
-
-      <!--<h5>Price</h5>-->
-
-      <!--<fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>-->
-
-
       <h5>Categories</h5>
 
       <div fm-checkbox-list ng-model="filter.categories">
@@ -44,71 +34,7 @@
     </h4>
 
 
-
-    <!--<table class="table table-hover table-striped">-->
-      <!--<tr>-->
-        <!--<th><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>-->
-        <!--<th><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>-->
-        <!--<th><a href ng-click="sortBy('stars')">Rating {{sortIconFor('stars')}}</a></th>-->
-      <!--</tr>-->
-      <!--<tr ng-repeat="restaurant in restaurants">-->
-        <!--<td width="100" height="100">-->
-
-   <!--&lt;!&ndash;-->
-          <!--<ul class="chart" style="width:{{width}}px; height:{{height}}px;">-->
-
-            <!--<div class="y" style="width:{{height}}px;">{{yAxis}}</div>-->
-            <!--<div class="x">{{xAxis}}</div>-->
-
-            <!--<li ng-repeat="bar in restaurant.features" class="bar"-->
-                <!--style="height:{{bar.score / max * height}}px; width:{{width / restaurant.features.length - 5}}px; left:{{$index / restaurant.features.length * width}}px;">-->
-              <!--<span>{{bar.feature}}:{{bar.score}}</span>-->
-            <!--</li>-->
-          <!--</ul>-->
-          <!--&ndash;&gt;-->
-
-
-            <!--<div width="100" height="100">-->
-                <!--<canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="100" height="100"></canvas>-->
-            <!--</div>-->
-
-        <!--</td>-->
-        <!--<td>-->
-          <!--<a href="#/menu/{{restaurant.id}}">-->
-            <!--<img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">-->
-            <!--<b>{{restaurant.businessName}}</b>-->
-          <!--</a>-->
-          <!--<p>{{restaurant.address}}</p>-->
-        <!--</td>-->
-        <!--<td>-->
-          <!--<fm-rating ng-model="$parent.restaurant.stars" readonly="true"></fm-rating>-->
-        <!--</td>-->
-        <!--<td>-->
-          <!--<fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>-->
-        <!--</td>-->
-      <!--</tr>-->
-    <!--</table>-->
-
       <div class="main-table">
-          <!--<div class="header-row">-->
-
-
-              <!--<div class="item">-->
-                  <!--<h2><a href="javascript: void(0);">Name </a></h2>-->
-              <!--</div>-->
-
-              <!--<div class="item-f">-->
-                  <!--<h2><a href="javascript: void(0);">Feature Score</a></h2>-->
-              <!--</div>-->
-
-              <!--&lt;!&ndash;<div class="item">&ndash;&gt;-->
-                  <!--&lt;!&ndash;<h2><a href="javascript: void(0);">Price </a></h2>&ndash;&gt;-->
-              <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-              <!--<div class="item-s">-->
-                  <!--<h2><a href="javascript: void(0);">Rating </a></h2>-->
-              <!--</div>-->
-          <!--</div>-->
 
           <div>
               <div class="data-row" ng-repeat="restaurant in restaurants">
@@ -131,7 +57,7 @@
 
                   <div class="data-item-f">
                       <div class="item, chart-container">
-                          <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="90" height="90"></canvas>
+                          <canvas id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)" width="90" height="80"></canvas>
                       </div>
                   </div>
 
@@ -153,10 +79,4 @@
   </div>
 </div>
 
-<!--<div ng-repeat="restaurant in restaurants">-->
 
-    <!--<div width="100" height="100">-->
-        <!--<canvas width="100" height="100" id="barChart_{{$index}}" ng-bind = "bindCanvas(restaurant, $index)"></canvas>-->
-    <!--</div>-->
-
-<!--</div>-->
