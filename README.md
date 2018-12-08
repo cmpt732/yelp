@@ -26,13 +26,13 @@ yelp_nlp.py
 | `#args2: output` | output directory |
 
 **Folder directory: Data_process**
-* pre-process data *
+**pre-process data**
 | File | Description |
 | --- | --- |
 | `yelp_business_data_clean.py` | filter out all restaurants business data |
 | `yelp_review_data_clean.py` | filter out all restaurant review data |
 
-* post-process data *
+**post-process data**
 | File | Description |
 | --- | --- |
 | `yelp_recommendation_info.py` | merge business data, recommendation info and nlp feature info |
