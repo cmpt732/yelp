@@ -31,14 +31,7 @@ yelp_nlp.py
 | --- | --- |
 | `yelp_business_data_clean.py` | filter out all restaurants business data |
 | `yelp_review_data_clean.py` | filter out all restaurant review data |
-
-| File | Description |
-| --- | --- |
 | `yelp_recommendation_info.py` | merge business data, recommendation info and nlp feature info |
-
-* recommendation for cold start *
-| File | Description |
-| --- | --- |
 | `yelp_visitor_recommend.py` | recommendation for visitors |
 
 yelp_business_data_clean.py
