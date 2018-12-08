@@ -33,6 +33,19 @@ yelp_nlp.py
 | `yelp_review_data_clean.py` | filter out all restaurant review data |
 | `yelp_recommendation_info.py` | merge business data, recommendation info and nlp feature info |
 | `yelp_visitor_recommend.py` | recommendation for visitors |
+yelp_visitor_recommend.py
+
+| Arguments | Description |
+| --- | --- |
+| `#args1: input_bus` | input directory for business.json |
+| `#args2: input_rev` | input directory for review.json |
+| `#args3: input_feature` | input directory for nlp feature scores |
+| `#args4: city` | input city |
+| `#args5: state` | input state |
+| `#args6: keywords` | input a list of keywords |
+| `#args7: k` | input an integer |
+| `#args8: output` | output directory |
+
 
 yelp_business_data_clean.py
 
@@ -57,16 +70,3 @@ yelp_recommendation_info.py
 | `#args2: input_recommend` | input directory for our top-k recommendation |
 | `#args3: input_feature` | input directory for nlp feature scores |
 | `#args4: output` | output directory |
-
-yelp_visitor_recommend.py
-
-| Arguments | Description |
-| --- | --- |
-| `#args1: input_bus` | input directory for business.json |
-| `#args2: input_rev` | input directory for review.json |
-| `#args3: input_feature` | input directory for nlp feature scores |
-| `#args4: city` | input city |
-| `#args5: state` | input state |
-| `#args6: keywords` | input a list of keywords |
-| `#args7: k` | input an integer |
-| `#args8: output` | output directory |
