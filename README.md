@@ -1,6 +1,9 @@
 # Yelp Recommender
 The project is to build a recommender system that will recommend restaurants to users based their reviews using Yelp Open Dataset.
 
+Details of our performance on demo day, please see presentation.pptx
+
+
 **Folder directory: code**
 
 | File | Description |
