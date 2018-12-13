@@ -10,6 +10,7 @@ Details of our performance on demo day, please see presentation.pptx
 | --- | --- |
 | `yelp_recommender.py` | the Item-based Collabrative Filtering Algorithm is implemented with Spark |
 | `yelp_nlp.py` | Select features and calculate the weights to facilitate recommendation |
+| `yelp_visitor_recommend.py` | recommendation for visitors |
 | `load_tools.py` | Load tools |
 
 yelp_recommender.py
@@ -27,6 +28,19 @@ yelp_nlp.py
 | --- | --- |
 | `#args1: inputs` | input directory for review.json |
 | `#args2: output` | output directory |
+
+yelp_visitor_recommend.py
+
+| Arguments | Description |
+| --- | --- |
+| `#args1: input_bus` | input directory for business.json |
+| `#args2: input_rev` | input directory for review.json |
+| `#args3: input_feature` | input directory for nlp feature scores |
+| `#args4: city` | input city |
+| `#args5: state` | input state |
+| `#args6: keywords` | input a list of keywords|
+| `#args7: k` | input an integer |
+| `#args8: output` | output directory |
 
 **Folder directory: Data_process**
 
