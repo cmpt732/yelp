@@ -10,7 +10,7 @@ Details of our performance on demo day, please see presentation.pptx
 | --- | --- |
 | `yelp_recommender.py` | the Item-based Collabrative Filtering Algorithm is implemented with Spark |
 | `yelp_nlp.py` | Select features and calculate the weights to facilitate recommendation |
-| `yelp_visitor_recommend.py` | recommendation for visitors |
+| `yelp_visitor_recommend.py` | recommendation for visitors (cold start) |
 | `load_tools.py` | Load tools |
 
 yelp_recommender.py
