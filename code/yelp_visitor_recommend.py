@@ -31,7 +31,6 @@ def add_one(num):
     num = num + 1
     return num
 
-like_f = function.udf(lambda col: True if set(col) & set(keywords) else False, BooleanType())
 
 def main(input_bus, input_rev, input_feature, city, state, keywords, k, output):
 
